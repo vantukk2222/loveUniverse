@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sinh nhật em Ánh</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas cho Three.js -->
+    <canvas id="threeCanvas"></canvas>
+    
+    <!-- Fireworks 2D Overlay -->
+    <div class="fireworks-overlay" id="fireworksOverlay">
+        <canvas id="fireworksCanvas"></canvas>
+        <div class="birthday-message" id="birthdayMessage">
+            Chúc mừng sinh nhật em iu nhé. ❤️❤️❤️❤️
+        </div>
+    </div>
+    
+    <!-- UI Overlay -->
+    <div class="ui-overlay">
+        <!-- Modal để hiển thị ảnh zoom -->
+        <div class="modal" id="imageModal">
+            <div class="modal-content">
+                <span class="close" id="closeModal">&times;</span>
+                <img id="modalImage" src="" alt="">
+                <div class="image-info">
+                    <h3 id="imageName"></h3>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button id="zoomIn">+</button>
+            <button id="zoomOut">-</button>
+            <button id="reset">Reset</button>
+            <button id="rotateLeft">↶</button>
+            <button id="rotateRight">↷</button>
+            <button id="rotateUp">↑</button>
+            <button id="rotateDown">↓</button>
+            <button id="autoRotate">🔄</button>
+            <button id="turbulence">🌪️</button>
+        </div>
+        
+        <!-- Loading -->
+        <div class="loading" id="loading">
+            <div class="loading-text">...</div>
+        </div>
+        
+        <!-- Instructions -->
+        <!-- <div class="instructions" id="instructions">
+            <div class="instructions-content">
+                <h3>💖 Vũ Trụ Tình Yêu 3D</h3>
+                <p><strong>Click</strong> ảnh để xem chi tiết</p>
+                <p><strong>Kéo thả</strong> để xoay camera</p>
+                <p><strong>Scroll</strong> để zoom in/out</p>
+                <p><strong>←/→/↑/↓</strong> xoay không gian</p>
+                <p><strong>🔄</strong> tự động xoay</p>
+                <p><strong>🌪️</strong> tạo gió vũ trụ</p>
+                <p><strong>R</strong> để reset</p>
+                <div style="margin-top: 15px; opacity: 0.8; font-size: 0.9em;">
+                    <em>✨ Các ảnh kỷ niệm trôi nổi trong vũ trụ tình yêu 3D!</em>
+                </div>
+                <button id="hideInstructions">Khám phá vũ trụ! 🚀💕</button>
+            </div>
+        </div> -->
+    </div>
+    
+    <!-- Three.js Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
